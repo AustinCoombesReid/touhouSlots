@@ -29,7 +29,7 @@ import static javax.swing.JOptionPane.YES_OPTION;
  * @author c0628439
  */
 public class NewJFrame extends javax.swing.JFrame{
-int credits = 100;
+int credits = 0;
     private Clip SoundClip;
 
     /**
@@ -544,7 +544,7 @@ int credits = 100;
         if ((srn1>=11 && srn1<= 15) && (srn2<=10 || srn2>=16)&& (srn3<=10 || srn3>=16)){
          credits = credits + 5;
          Credits.setText(Integer.toString(credits));
-          info.setText("One Cirno 5 credits earned");
+         info.setText("One Cirno 5 credits earned");
         }
         else if ((srn1<=10 || srn1>=16) && (srn2>=11 && srn2<=15)&& (srn3<=10 || srn3>=16))
                  {
@@ -617,7 +617,7 @@ int credits = 100;
                  }
     if (credits==0){
              JFrame frame = new JFrame();
-    String message = "You are out of money.... Quiting to main menu";
+    String message = "Reimu is rubbing off on you..out of money... Quiting to main menu";
     int answer = JOptionPane.showConfirmDialog(frame, message,"Out of Credits D:",YES_OPTION);
     if (answer == JOptionPane.YES_OPTION) {
         credits = 100;
